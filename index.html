@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Python Dasar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>🐍 Belajar Python Dasar</h1>
+</header>
+
+<section class="hero">
+    <h1>Selamat Datang!</h1>
+    <p>
+        Website ini akan membimbing kamu mempelajari Python dari dasar – mulai dari variabel,
+        input/output, operator, hingga function. Di akhir pembelajaran, kamu akan membuat project sederhana:
+        <strong>Kalkulator Python menggunakan function</strong>.
+    </p>
+    <button class="start-btn"><a href="#materi-1">Mulai Belajar</a></button>
+</section>
+
+<section class="nav-section">
+    <h2>📚 Apa yang Akan Kamu Pelajari?</h2>
+    <div class="nav-links">
+        <a href="#materi-1">📌 Python Dasar</a>
+        <a href="#materi-2">📌 Variabel & Tipe Data</a>
+        <a href="#materi-3">📌 Input/Output</a>
+        <a href="#materi-4">📌 Operator</a>
+        <a href="#materi-5">📌 Function</a>
+        <a href="#quiz">📝 Quiz/Latihan</a>
+        <a href="#project">🎯 Project Akhir</a>
+    </div>
+</section>
+
+<!-- MATERI 1: APA ITU PYTHON -->
+<section id="materi-1" class="content-section scroll-fade">
+    <h2>📖 Apa Itu Python?</h2>
+    <p>
+        <span class="highlight">Python</span> adalah bahasa pemrograman tingkat tinggi yang mudah dipelajari dan banyak digunakan dalam berbagai bidang
+        seperti kecerdasan buatan, data science, pengembangan web, automasi, dan banyak lainnya.
+    </p>
+
+    <h3>✨ Kenapa Python Populer?</h3>
+    <ul>
+        <li>✔ Mudah dibaca dan dipahami (bahkan untuk pemula)</li>
+        <li>✔ Banyak digunakan dalam industri (Google, Netflix, Instagram)</li>
+        <li>✔ Mendukung berbagai aplikasi (AI, Web, Data, IoT)</li>
+        <li>✔ Komunitas besar dan dokumentasi lengkap</li>
+        <li>✔ Banyak library siap pakai</li>
+    </ul>
+
+    <h3>💡 Cara Kerja Python</h3>
+    <p>
+        Python adalah bahasa <span class="highlight">interpreted</span>, artinya kode Python diterjemahkan baris per baris oleh interpreter
+        dan langsung dijalankan. Berbeda dengan bahasa seperti C++ yang harus dikompilasi terlebih dahulu.
+    </p>
+
+    <div class="code-block">
+        <code>
+# Contoh kode Python yang sederhana<br>
+nama = "Bryan"<br>
+print("Halo, " + nama)<br>
+        </code>
+    </div>
+
+    <p>Output: <strong>Halo, Bryan</strong></p>
+</section>
+
+<!-- MATERI 2: VARIABEL & TIPE DATA -->
+<section id="materi-2" class="content-section scroll-fade">
+    <h2>🧩 Variabel & Tipe Data</h2>
+    <p>
+        <span class="highlight">Variabel</span> adalah sebuah "kotak" atau "wadah" untuk menyimpan data dalam program.
+        Setiap variabel memiliki nama dan menyimpan suatu nilai.
+    </p>
+
+    <h3>🎯 Apa Itu Variabel?</h3>
+    <p>
+        Bayangkan variabel seperti kotak yang memiliki label (nama). Kamu bisa menyimpan barang (nilai) di dalam kotak tersebut,
+        dan kapan saja kamu bisa membuka kotak untuk mengambil atau mengubah isinya.
+    </p>
+
+    <div class="code-block">
+        <code>
+nama = "Bryan"       # variabel bernama 'nama' berisi teks "Bryan"<br>
+umur = 16            # variabel bernama 'umur' berisi angka 16<br>
+tinggi = 171.5       # variabel bernama 'tinggi' berisi angka desimal 171.5<br>
+adalah_pelajar = True # variabel bernama 'adalah_pelajar' berisi True
+        </code>
+    </div>
+
+    <h3>📊 Tipe Data Utama di Python</h3>
+    <p>Python memiliki beberapa tipe data dasar yang perlu kamu ketahui:</p>
+
+    <div class="type-grid">
+        <div class="type-card">
+            <h4>int (Integer)</h4>
+            <p>Bilangan bulat (tidak memiliki desimal)</p>
+            <code>x = 42</code>
+        </div>
+        <div class="type-card">
+            <h4>float (Floating Point)</h4>
+            <p>Bilangan desimal</p>
+            <code>y = 3.14</code>
+        </div>
+        <div class="type-card">
+            <h4>str (String)</h4>
+            <p>Teks atau kalimat</p>
+            <code>nama = "Python"</code>
+        </div>
+        <div class="type-card">
+            <h4>bool (Boolean)</h4>
+            <p>True atau False</p>
+            <code>is_active = True</code>
+        </div>
+    </div>
+
+    <h3>💻 Simulator Variabel Interaktif</h3>
+    <p>Coba buat variabel sendiri di bawah ini! Ketik perintah Python dan lihat hasilnya.</p>
+
+    <div class="interactive-box">
+        <h4>🔬 Eksperimen Variabel</h4>
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('tab1')">Contoh 1: Tipe Data</button>
+            <button class="tab-btn" onclick="switchTab('tab2')">Contoh 2: Input Sendiri</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <p><strong>Mari kita buat beberapa variabel sekaligus:</strong></p>
+            <button onclick="simulatorVariabel1()" style="padding: 10px 20px; background: #4b79a1; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Jalankan Contoh</button>
+            <div class="output-box" id="output1">>>> Klik tombol di atas untuk menjalankan</div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <p><strong>Buat variabel dengan nilai kamu sendiri:</strong></p>
+            <div class="input-group">
+                <input type="text" id="varName" placeholder="Nama variabel (misal: nama)" value="hobi">
+                <input type="text" id="varValue" placeholder="Nilai (misal: Belajar Python)" value="Bermain Game">
+                <button onclick="simulatorVariabel2()">Jalankan</button>
+            </div>
+            <div class="output-box" id="output2">>>> Output akan muncul di sini</div>
+        </div>
+    </div>
+
+    <h3>📝 Contoh Penggunaan Variabel</h3>
+    <div class="code-block">
+        <code>
+# Deklarasi variabel<br>
+nama_lengkap = "Muhammad Bryan Arista"<br>
+usia = 16<br>
+tinggi_badan = 171.5<br>
+adalah_siswa = True<br>
+<br>
+# Menggunakan variabel<br>
+print("Nama: " + nama_lengkap)<br>
+print("Usia: " + str(usia))<br>
+print("Tinggi: " + str(tinggi_badan) + " cm")<br>
+        </code>
+    </div>
+
+    <h3>⚡ Tips Penamaan Variabel</h3>
+    <ul>
+        <li>✔ Gunakan nama yang deskriptif (contoh: <code>umur</code> lebih baik dari <code>x</code>)</li>
+        <li>✔ Mulai dengan huruf atau underscore (_), jangan dengan angka</li>
+        <li>✔ Gunakan lowercase dengan underscore untuk nama panjang (contoh: <code>nama_lengkap</code>)</li>
+        <li>✔ Jangan gunakan spasi dalam nama variabel</li>
+        <li>✔ Hindari menggunakan keyword Python (seperti <code>if</code>, <code>for</code>, <code>while</code>)</li>
+    </ul>
+</section>
+
+<!-- MATERI 3: INPUT & OUTPUT -->
+<section id="materi-3" class="content-section">
+    <h2>📤 Input & Output</h2>
+    <p>
+        <span class="highlight">Input</span> adalah data yang diberikan oleh pengguna,
+        dan <span class="highlight">Output</span> adalah hasil yang ditampilkan program kepada pengguna.
+    </p>
+
+    <h3>🖨️ Output dengan print()</h3>
+    <p>Fungsi <code>print()</code> digunakan untuk menampilkan data ke layar.</p>
+
+    <div class="code-block">
+        <code>
+print("Halo, Dunia!")<br>
+print("Python sangat mudah")<br>
+print(42)<br>
+print(3.14)
+        </code>
+    </div>
+
+    <h3>⌨️ Input dengan input()</h3>
+    <p>Fungsi <code>input()</code> digunakan untuk menerima data dari pengguna.</p>
+
+    <div class="code-block">
+        <code>
+nama = input("Siapa nama kamu? ")<br>
+print("Halo, " + nama)
+        </code>
+    </div>
+
+    <h3>💻 Coba Input & Output</h3>
+    <div class="interactive-box">
+        <h4>🔬 Simulasi Input/Output</h4>
+        <p><strong>Masukkan nama kamu:</strong></p>
+        <div class="input-group">
+            <input type="text" id="inputNama" placeholder="Masukkan nama kamu" value="Bryan">
+            <button onclick="simulatorIO()">Jalankan</button>
+        </div>
+        <div class="output-box" id="outputIO">>>> Output akan muncul di sini</div>
+    </div>
+</section>
+
+<!-- MATERI 4: OPERATOR -->
+<section id="materi-4" class="content-section">
+    <h2>➕ Operator Aritmatika</h2>
+    <p>Operator aritmatika digunakan untuk melakukan operasi matematika.</p>
+
+    <div class="type-grid">
+        <div class="type-card">
+            <h4>+</h4>
+            <p>Penjumlahan</p>
+            <code>5 + 3 = 8</code>
+        </div>
+        <div class="type-card">
+            <h4>-</h4>
+            <p>Pengurangan</p>
+            <code>5 - 3 = 2</code>
+        </div>
+        <div class="type-card">
+            <h4>*</h4>
+            <p>Perkalian</p>
+            <code>5 * 3 = 15</code>
+        </div>
+        <div class="type-card">
+            <h4>/</h4>
+            <p>Pembagian</p>
+            <code>15 / 3 = 5.0</code>
+        </div>
+        <div class="type-card">
+            <h4>//</h4>
+            <p>Pembagian Bulat</p>
+            <code>15 // 4 = 3</code>
+        </div>
+        <div class="type-card">
+            <h4>%</h4>
+            <p>Modulo (Sisa)</p>
+            <code>15 % 4 = 3</code>
+        </div>
+        <div class="type-card">
+            <h4>**</h4>
+            <p>Pangkat</p>
+            <code>2 ** 3 = 8</code>
+        </div>
+    </div>
+
+    <h3>💻 Kalkulator Sederhana</h3>
+    <div class="interactive-box">
+        <h4>🧮 Coba Operator</h4>
+        <div class="input-group">
+            <input type="number" id="angka1" placeholder="Angka pertama" value="10">
+            <select id="operator" style="padding: 10px 15px; border: 1px solid #4b79a1; border-radius: 6px;">
+                <option value="+">+ (Tambah)</option>
+                <option value="-">- (Kurang)</option>
+                <option value="*">* (Kali)</option>
+                <option value="/">/ (Bagi)</option>
+                <option value="//">// (Bagi Bulat)</option>
+                <option value="%">% (Modulo)</option>
+                <option value="**">** (Pangkat)</option>
+            </select>
+            <input type="number" id="angka2" placeholder="Angka kedua" value="3">
+            <button onclick="kalkulator()">Hitung</button>
+        </div>
+        <div class="output-box" id="outputKalkulator">>>> Hasil akan muncul di sini</div>
+    </div>
+</section>
+
+<!-- MATERI 5: FUNCTION -->
+<section id="materi-5" class="content-section">
+    <h2>🔧 Function (Fungsi)</h2>
+    <p>
+        <span class="highlight">Function</span> adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu.
+        Function membantu membuat kode lebih rapi dan mudah dirawat.
+    </p>
+
+    <h3>🎯 Mengapa Perlu Function?</h3>
+    <ul>
+        <li>✔ Menghindari penulisan kode yang berulang</li>
+        <li>✔ Membuat kode lebih terstruktur dan mudah dibaca</li>
+        <li>✔ Memudahkan debugging dan maintenance</li>
+        <li>✔ Meningkatkan reusability kode</li>
+    </ul>
+
+    <h3>📝 Struktur Function</h3>
+    <div class="code-block">
+        <code>
+def nama_function(parameter1, parameter2):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;# Kode di dalam function<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hasil = parameter1 + parameter2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return hasil<br>
+<br>
+# Memanggil function<br>
+output = nama_function(5, 3)<br>
+print(output)  # Output: 8
+        </code>
+    </div>
+
+    <h3>💡 Contoh Function Sederhana</h3>
+    <div class="code-block">
+        <code>
+def sapa(nama):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Halo, " + nama + "!")<br>
+<br>
+sapa("Bryan")  # Output: Halo, Bryan!<br>
+sapa("Python") # Output: Halo, Python!
+        </code>
+    </div>
+
+    <h3>🔢 Function dengan Return</h3>
+    <div class="code-block">
+        <code>
+def tambah(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+<br>
+def kurang(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a - b<br>
+<br>
+hasil1 = tambah(10, 5)   # 15<br>
+hasil2 = kurang(10, 3)   # 7
+        </code>
+    </div>
+
+    <h3>💻 Coba Function</h3>
+    <div class="interactive-box">
+        <h4>🔬 Simulasi Function</h4>
+        <p><strong>Contoh: Function Penjumlahan</strong></p>
+        <div class="input-group">
+            <input type="number" id="funcA" placeholder="Angka A" value="15">
+            <input type="number" id="funcB" placeholder="Angka B" value="7">
+            <button onclick="simulatorFunction()">Jalankan Function</button>
+        </div>
+        <div class="output-box" id="outputFunc">>>> Output akan muncul di sini</div>
+    </div>
+</section>
+
+<!-- QUIZ/LATIHAN SECTION -->
+<section id="quiz" class="content-section scroll-fade">
+    <h2>📝 Quiz & Latihan Interaktif</h2>
+    <p>
+        Uji pemahamanmu dengan menjawab pertanyaan-pertanyaan di bawah ini!
+        Setiap jawaban yang benar akan menambah skormu. Semoga berhasil! 🎯
+    </p>
+
+    <div class="quiz-tab-buttons">
+        <button class="quiz-tab-btn active" onclick="switchQuiz('quiz-basic')">Dasar</button>
+        <button class="quiz-tab-btn" onclick="switchQuiz('quiz-intermediate')">Menengah</button>
+        <button class="quiz-tab-btn" onclick="switchQuiz('quiz-advanced')">Sulit</button>
+    </div>
+
+    <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar" style="width: 0%"></div>
+    </div>
+
+    <!-- QUIZ DASAR -->
+    <div id="quiz-basic" class="quiz-section active">
+        <h3>Level: Dasar</h3>
+        <p>Pertanyaan untuk menguji pemahaman dasar Python</p>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 1: Tipe Data</h4>
+            <p>Apa tipe data dari nilai <code>nama = "Python"</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="int"> int
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="str"> str
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="float"> float
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="bool"> bool
+                </label>
+            </div>
+            <div class="quiz-result" id="result1"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 2: Operator</h4>
+            <p>Berapa hasil dari <code>10 + 5 * 2</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="20"> 20
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="30"> 30
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="40"> 40
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="50"> 50
+                </label>
+            </div>
+            <div class="quiz-result" id="result2"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 3: Output</h4>
+            <p>Apa output dari <code>print("Halo" + " " + "Python")</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="HaloPython"> HaloPython
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="Halo Python"> Halo Python
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="error"> error
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="undefined"> undefined
+                </label>
+            </div>
+            <div class="quiz-result" id="result3"></div>
+        </div>
+
+        <div class="quiz-button-group">
+            <button onclick="checkQuizBasic()">✔️ Cek Jawaban</button>
+            <button onclick="resetQuiz('quiz-basic')">🔄 Ulang</button>
+        </div>
+    </div>
+
+    <!-- QUIZ MENENGAH -->
+    <div id="quiz-intermediate" class="quiz-section">
+        <h3>Level: Menengah</h3>
+        <p>Pertanyaan untuk menguji pemahaman menengah Python</p>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 1: Modulo</h4>
+            <p>Berapa hasil dari <code>17 % 5</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q4" value="2"> 2
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q4" value="3"> 3
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q4" value="4"> 4
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q4" value="12"> 12
+                </label>
+            </div>
+            <div class="quiz-result" id="result4"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 2: Variabel</h4>
+            <p>Manakah nama variabel yang benar dalam Python?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q5" value="2variabel"> 2variabel
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q5" value="var-nama"> var-nama
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q5" value="nama_panjang"> nama_panjang
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q5" value="nama variabel"> nama variabel
+                </label>
+            </div>
+            <div class="quiz-result" id="result5"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 3: Pembagian Bulat</h4>
+            <p>Berapa hasil dari <code>25 // 4</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q6" value="6.25"> 6.25
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q6" value="6"> 6
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q6" value="7"> 7
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q6" value="5"> 5
+                </label>
+            </div>
+            <div class="quiz-result" id="result6"></div>
+        </div>
+
+        <div class="quiz-button-group">
+            <button onclick="checkQuizIntermediate()">✔️ Cek Jawaban</button>
+            <button onclick="resetQuiz('quiz-intermediate')">🔄 Ulang</button>
+        </div>
+    </div>
+
+    <!-- QUIZ SULIT -->
+    <div id="quiz-advanced" class="quiz-section">
+        <h3>Level: Sulit</h3>
+        <p>Pertanyaan untuk menguji pemahaman lanjut Python</p>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 1: Function Return</h4>
+            <p>Apa output dari program berikut?</p>
+            <div class="code-block" style="margin: 10px 0;">
+                <code>
+def hitung(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x * 2 + 3<br>
+<br>
+hasil = hitung(5)<br>
+print(hasil)
+                </code>
+            </div>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q7" value="10"> 10
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q7" value="13"> 13
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q7" value="26"> 26
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q7" value="15"> 15
+                </label>
+            </div>
+            <div class="quiz-result" id="result7"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 2: Tipe Data Percampuran</h4>
+            <p>Apa hasil dari <code>str(10) + "0"</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q8" value="100"> 100
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q8" value="error"> error
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q8" value="100-string">100 (string)
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q8" value="10"> 10
+                </label>
+            </div>
+            <div class="quiz-result" id="result8"></div>
+        </div>
+
+        <div class="quiz-question">
+            <h4>❓ Soal 3: Pangkat</h4>
+            <p>Berapa hasil dari <code>2 ** 3 + 2 ** 2</code>?</p>
+            <div class="quiz-options">
+                <label class="quiz-option">
+                    <input type="radio" name="q9" value="10"> 10
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q9" value="12"> 12
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q9" value="25"> 25
+                </label>
+                <label class="quiz-option">
+                    <input type="radio" name="q9" value="16"> 16
+                </label>
+            </div>
+            <div class="quiz-result" id="result9"></div>
+        </div>
+
+        <div class="quiz-button-group">
+            <button onclick="checkQuizAdvanced()">✔️ Cek Jawaban</button>
+            <button onclick="resetQuiz('quiz-advanced')">🔄 Ulang</button>
+        </div>
+    </div>
+
+    <div class="quiz-score" id="quizScore" style="display: none;">
+        <h3>📊 Skor Akhir</h3>
+        <p id="scoreText"></p>
+    </div>
+</section>
+<section id="project" class="content-section">
+    <h2>🎯 Project Akhir: Kalkulator dengan Function</h2>
+    <p>
+        Sekarang saatnya kamu menggabungkan semua yang telah dipelajari untuk membuat project:
+        <span class="highlight">Kalkulator Sederhana menggunakan Function</span>.
+    </p>
+
+    <h3>🎓 Tujuan Project</h3>
+    <ul>
+        <li>✔ Memahami cara membuat dan memanggil function</li>
+        <li>✔ Menggabungkan operator dan input/output</li>
+        <li>✔ Membuat program yang fungsional dan berguna</li>
+    </ul>
+
+    <h3>📋 Struktur Program</h3>
+    <div class="code-block">
+        <code>
+def tambah(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+<br>
+def kurang(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a - b<br>
+<br>
+def kali(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a * b<br>
+<br>
+def bagi(a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if b != 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a / b<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Error: Tidak bisa bagi dengan 0"<br>
+<br>
+print("=== KALKULATOR SEDERHANA ===")<br>
+a = float(input("Masukkan angka pertama: "))<br>
+b = float(input("Masukkan angka kedua: "))<br>
+<br>
+print("Penjumlahan:", tambah(a, b))<br>
+print("Pengurangan:", kurang(a, b))<br>
+print("Perkalian:", kali(a, b))<br>
+print("Pembagian:", bagi(a, b))
+        </code>
+    </div>
+
+    <h3>💻 Coba Project di Sini</h3>
+    <div class="interactive-box">
+        <h4>🧮 Simulasi Kalkulator Lengkap</h4>
+        <p><strong>Masukkan dua angka untuk dikalkulasi:</strong></p>
+        <div class="input-group">
+            <input type="number" id="projectA" placeholder="Angka pertama" value="20">
+            <input type="number" id="projectB" placeholder="Angka kedua" value="5">
+            <button onclick="projectKalkulator()">Jalankan Kalkulator</button>
+        </div>
+        <div class="output-box" id="outputProject">>>> Hasil kalkulator akan muncul di sini</div>
+    </div>
+
+    <h3>✅ Penilaian Project</h3>
+    <ul>
+        <li>✔ Menggunakan function untuk setiap operasi</li>
+        <li>✔ Menggunakan input() untuk menerima data pengguna</li>
+        <li>✔ Output menampilkan semua hasil dengan jelas</li>
+        <li>✔ (Bonus) Ada penanganan error untuk pembagian dengan 0</li>
+    </ul>
+</section>
+
+<section class="footer">
+    <p>🎉 Selamat! Kamu telah menyelesaikan pembelajaran Python Dasar.</p>
+    <p>Terus berlatih dan jangan takut untuk bereksperimen dengan kode!</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
